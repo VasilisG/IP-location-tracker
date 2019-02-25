@@ -39,7 +39,6 @@ All available types of responses for DNS PTR records.
 '''
 ptrPlain = 'https://get.geojs.io/v1/dns/ptr'
 
-
 # Gets the response of a url that returns plain text as response.
 def getPlainResponse(url):
     return urllib.request.urlopen(url).read().decode().strip()
