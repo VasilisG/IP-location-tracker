@@ -26,31 +26,39 @@ __Getting country origin of IP address:__
 
 (The address below is one of the IP address range that Google uses.)
 
+
+This will return plain text by default, as we haven't set the second argument.
+
 ```
-# This will return plain text by default, as we haven't set the second argument.
-
 country = geo.getCountry('216.239.32.0')
-
-# Result: US
-
-# This will return the country's full name.
-
+```
+Result:
+```
+US
+```
+This will return the country's full name.
+```
 country = geo.getCountry('216.239.32.0', 'plainfull')
-
-#Result: United States
-
-# This will return a json response which will contains all formats of country's name and the responding IP address.
-
+```
+Result: 
+```
+United States
+```
+This will return a json response which will contains all formats of country's name and the responding IP address.
+```
 country = geo.getCountry('216.239.32.0', 'json')
-
-# Result: {'country': 'US', 'country_3': 'USA', 'ip': '216.239.32.0', 'name': 'United States'}
+```
+Result: 
+```
+{'country': 'US', 'country_3': 'USA', 'ip': '216.239.32.0', 'name': 'United States'}
 ```
 
 __Getting geolocation data of IP address:__
 ```
 geoData = geo.getGeoData('216.239.32.0')
-
-#Returns:
+```
+Returns:
+```
 {'organization_name': 'Google LLC', 'region': 'California', 'accuracy': 1000, 'asn': 15169, 'organization': 'AS15169 Google LLC', 'timezone': 'America/Los_Angeles', 'longitude': '-122.2971', 'country_code3': 'USA', 'area_code': '0', 'ip': '216.239.32.0', 'city': 'San Mateo', 'country': 'United States', 'continent_code': 'NA', 'country_code': 'US', 'latitude': '37.5428'}
 ```
 
